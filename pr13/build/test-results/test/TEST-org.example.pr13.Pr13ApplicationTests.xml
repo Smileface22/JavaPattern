@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="org.example.pr13.Pr13ApplicationTests" tests="1" skipped="0" failures="0" errors="0" timestamp="2024-05-05T01:25:31" hostname="LAPTOP-4FDHRABC" time="1.753">
+  <properties/>
+  <testcase name="contextLoads()" classname="org.example.pr13.Pr13ApplicationTests" time="1.753"/>
+  <system-out><![CDATA[04:25:29.485 [Test worker] INFO org.springframework.test.context.support.AnnotationConfigContextLoaderUtils -- Could not detect default configuration classes for test class [org.example.pr13.Pr13ApplicationTests]: Pr13ApplicationTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+04:25:29.715 [Test worker] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper -- Found @SpringBootConfiguration org.example.pr13.Pr13Application for test class org.example.pr13.Pr13ApplicationTests
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+ :: Spring Boot ::                (v3.2.5)
+
+2024-05-05T04:25:30.722+03:00  INFO 11920 --- [pr13] [    Test worker] org.example.pr13.Pr13ApplicationTests    : Starting Pr13ApplicationTests using Java 17.0.11 with PID 11920 (started by nadia in C:\Android\JavaPattern\pr13)
+2024-05-05T04:25:30.724+03:00  INFO 11920 --- [pr13] [    Test worker] org.example.pr13.Pr13ApplicationTests    : No active profile set, falling back to 1 default profile: "default"
+Nadia
+Balagurova
+IKBO-20-22
+2024-05-05T04:25:31.983+03:00  INFO 11920 --- [pr13] [    Test worker] org.example.pr13.Pr13ApplicationTests    : Started Pr13ApplicationTests in 1.842 seconds (process running for 4.683)
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
