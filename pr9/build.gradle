@@ -1,0 +1,43 @@
+plugins {
+    id 'java'
+}
+
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    testImplementation platform('org.junit:junit-bom:5.9.1')
+    testImplementation 'org.junit.jupiter:junit-jupiter'
+}
+
+test {
+    useJUnitPlatform()
+}
+
+jar {
+    archiveBaseName = 'lab9'
+    destinationDirectory = file("$buildDir/jars")
+    manifest {
+        attributes 'Main-Class': 'org.example.Main'
+    }
+}
+
+
+task copyJar(type: Copy) {
+    dependsOn 'jar'
+    from jar.destinationDirectory
+    into "$buildDir/docker"
+}
+
+task buildImage(type: Exec) {
+    dependsOn 'copyJar'
+    workingDir "$buildDir/docker"
+    commandLine 'docker', 'build', '-t', 'lab9-1.0', '.'
+}
+
+task runDocker(type: Exec) {
+    dependsOn 'buildImage'
+    commandLine 'docker', 'run', '--name', 'lab9-1.0', '--rm', 'lab9-1.0'
+}
